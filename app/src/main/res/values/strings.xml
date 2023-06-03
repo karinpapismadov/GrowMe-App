@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GrowMe-App</string>
+    <string name="back_to_menu_page">BACK TO MENU PAGE</string>
+    <string name="what_supplies_i_need_in_order_to_start_gardening">What_supplies_I_need_in_order_to_start_gardening</string>
+    <string name="how_do_i_get_the_system_to_work">How do I get the system to work?</string>
+    <string name="what_plants_are_recommended_for_this_kind_of_gardening">What plants are recommended for this kind of gardening?</string>
+    <string name="what_is_recommended_to_add_to_the_plant_s_water">what is recommended to add to the plant\'s water?</string>
+    <string name="how_can_i_reset_my_garden_with_new_plants">How can I reset my garden with new plants?</string>
+    <string name="i_can_not_find_the_system_s_number_in_order_to_register_where_is_it">I can not find the system\'s number in order to register, where is it?</string>
+    <string name="how_can_i_add_a_plant_into_my_garden">How can I add a plant into my garden?</string>
+    <string name="i_have_a_system_how_can_i_now_create_my_garden">I have a system, how can I now create my garden?</string>
+    <string name="help">Help</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account_click_to_login">Already have an account? click to login</string>
+    <string name="e_mail">E-mail</string>
+    <string name="registeration">Registeration</string>
+</resources>

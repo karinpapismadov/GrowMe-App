@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "881804602124",
+    "project_id": "growme-app-d914d",
+    "storage_bucket": "growme-app-d914d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881804602124:android:fc426885e4c42845d57729",
+        "android_client_info": {
+          "package_name": "com.example.growme_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "881804602124-ed3htk89rkmlp248hfkkttns5d80kc1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsDtojuUPyC8VJQBxhjDEa5Tc8lj3e32M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "881804602124-ed3htk89rkmlp248hfkkttns5d80kc1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
