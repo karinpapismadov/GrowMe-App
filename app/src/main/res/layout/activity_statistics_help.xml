@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flowerspink"
+    tools:context=".Statistics_helpActivity">
+
+    <TextView
+        android:id="@+id/stat_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Statistics"
+        android:textColor="#5D7C60"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,VisualLintOverlap" />
+
+    <TextView
+        android:id="@+id/menu_headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="serif"
+        android:text="-Help-"
+        android:textColor="#CC46A6"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,VisualLintOverlap" />
+
+</RelativeLayout>

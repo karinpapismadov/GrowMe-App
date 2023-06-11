@@ -3,14 +3,12 @@ package com.example.growme_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Button;
 
-public class StatisticsActivity extends AppCompatActivity {
+public class Statistics_helpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_statistics);
-
+        setContentView(R.layout.activity_statistics_help);
     }
 }

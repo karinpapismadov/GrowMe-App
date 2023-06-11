@@ -16,4 +16,11 @@
     <string name="already_have_an_account_click_to_login">Already have an account? click to login</string>
     <string name="e_mail">E-mail</string>
     <string name="registeration">Registeration</string>
+    <string name="my_account">My account</string>
+    <string name="create_a_garden">Create a garden</string>
+    <string name="garden_s_statistics">Garden\'s statistics</string>
+    <string name="garden_s_metrics">Garden\'s metrics</string>
+    <string name="exit">Exit</string>
+    <string name="back">Back</string>
+    <string name="hello">Hello</string>
 </resources>
