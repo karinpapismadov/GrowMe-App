@@ -28,7 +28,7 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_statistics_water_level);
 
         water_AVG = findViewById(R.id.waterAVG);
-        back = findViewById(R.id.button);
+        back = findViewById(R.id.back_button);
         avg = findViewById(R.id.average_headline);
         stat_head = findViewById(R.id.stat_headline);
         water_head = findViewById(R.id.water_headline);
@@ -49,6 +49,18 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
                 System.out.println("The read failed: " + databaseError.getCode());
                 }
             });
+
+
+
+
+
+
+
+
+
+
+
+
 
         //back button
         back.setOnClickListener(view -> {

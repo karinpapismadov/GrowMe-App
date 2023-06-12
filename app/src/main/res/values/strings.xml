@@ -23,4 +23,27 @@
     <string name="exit">Exit</string>
     <string name="back">Back</string>
     <string name="hello">Hello</string>
+    <string name="click_here_to_watch_the_graph">Click here to watch the graph</string>
+    <string name="back_button">Back</string>
+    <string name="avg">AVG</string>
+    <string name="average">Average:</string>
+    <string name="water_level">-Water level-</string>
+    <string name="statistics">Statistics</string>
+    <string name="water_levell">Water level</string>
+    <string name="light">Light</string>
+    <string name="temperature">Temperature</string>
+    <string name="help_">Help</string>
+    <string name="garden_s">Garden\'s</string>
+    <string name="live_stream">live stream</string>
+    <string name="click_here_to_watch_live_stream">Click here to watch live stream</string>
+    <string name="back_">Back</string>
+    <string name="log_in">Log In</string>
+    <string name="e__mail">E-mail</string>
+    <string name="password_">Password</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_click_to_register">Don\'t have an account? click to register</string>
+    <string name="temperature_">-Temperature-</string>
+    <string name="ph_level">-PH level-</string>
+    <string name="light_">-Light-</string>
+    <string name="help__">-Help-</string>
 </resources>

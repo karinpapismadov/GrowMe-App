@@ -70,8 +70,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Water level"
-                    android:textSize="20dp"
+                    android:text="@string/water_levell"
+                    android:textSize="20sp"
                     android:textColor="#5D7C60"
                     android:textAlignment="center"
                     android:textStyle="bold"/>
@@ -107,8 +107,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Light"
-                    android:textSize="20dp"
+                    android:text="@string/light"
+                    android:textSize="20sp"
                     android:textAlignment="center"
                     android:textColor="#5D7C60"
                     android:textStyle="bold" />
@@ -177,7 +177,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Back"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textColor="#5D7C60"
                     android:textAlignment="center"
                     android:textStyle="bold"
@@ -213,8 +213,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Temperature"
-                    android:textSize="18dp"
+                    android:text="@string/temperature"
+                    android:textSize="18sp"
                     android:textAlignment="center"
                     android:textColor="#5D7C60"
                     android:textStyle="bold" />
@@ -249,8 +249,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Help"
-                    android:textSize="20dp"
+                    android:text="@string/help_"
+                    android:textSize="20sp"
                     android:textAlignment="center"
                     android:textColor="#5D7C60"
                     android:textStyle="bold" />

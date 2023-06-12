@@ -42,7 +42,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp">
+        android:layout_marginBottom="70dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/user_card"
@@ -259,6 +259,7 @@
         <Button
             android:id="@+id/back_button"
             android:layout_width="115dp"
+            android:layout_marginTop="30dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
             app:cardCornerRadius="20dp"
@@ -268,6 +269,7 @@
             android:id="@+id/exit_button"
             android:layout_width="115dp"
             android:layout_height="70dp"
+            android:layout_marginTop="30dp"
             app:cardCornerRadius="20dp"
             android:layout_marginStart="10dp"
             android:textSize="20sp"
@@ -277,6 +279,7 @@
             android:layout_width="115dp"
             android:layout_height="70dp"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
             app:cardCornerRadius="20dp"
             android:textSize="20sp"
             android:text="Help"

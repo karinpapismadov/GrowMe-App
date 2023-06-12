@@ -7,21 +7,23 @@
     android:background="@drawable/flowerspink"
     tools:context=".Statistics_waterLevel_Activity">
 
+
     <TextView
         android:id="@+id/stat_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Statistics"
+        android:layout_marginTop="10dp"
+        android:text="@string/statistics"
         android:textColor="#5D7C60"
-        android:textSize="70sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <TextView
         android:id="@+id/water_headline"
@@ -29,22 +31,21 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="serif"
-        android:text="-Water level-"
+        android:text="@string/water_level"
         android:textColor="#CC46A6"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/stat_headline"
-        app:layout_constraintVertical_bias="0.107" />
-
+        app:layout_constraintVertical_bias="0.116" />
 
     <TextView
         android:id="@+id/average_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Average:"
+        android:text="@string/average"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,31 +53,45 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.185" />
+        app:layout_constraintVertical_bias="0.239" />
 
     <TextView
         android:id="@+id/waterAVG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AVG"
+        android:text="@string/avg"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.229" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/graph_button"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="@string/click_here_to_watch_the_graph"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.412"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="@string/back_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
+        app:layout_constraintVertical_bias="0.541"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

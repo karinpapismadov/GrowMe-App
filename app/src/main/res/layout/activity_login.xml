@@ -27,7 +27,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Log In"
+                android:text="@string/log_in"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
@@ -42,7 +42,7 @@
                 android:background="@drawable/border"
                 android:layout_marginTop="40dp"
                 android:padding="8dp"
-                android:hint="E-mail"
+                android:hint="@string/e__mail"
                 android:drawableStart="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
@@ -56,7 +56,7 @@
                 android:padding="8dp"
                 android:ems="10"
                 android:inputType="textPassword"
-                android:hint="Password"
+                android:hint="@string/password_"
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"/>
@@ -64,7 +64,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Login"
+                android:text="@string/login"
                 android:id="@+id/Login_button"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
@@ -77,7 +77,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:padding="7dp"
-                android:text="Don't have an account? click to register"
+                android:text="@string/don_t_have_an_account_click_to_register"
                 android:textColor="@color/Sea_Green"
                 android:textSize="16sp">
             </TextView>
