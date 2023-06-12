@@ -1,14 +1,13 @@
 package com.example.growme_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Statistics_waterLevel_Activity extends AppCompatActivity {
 
     private TextView water_AVG;
+    TextView avg, stat_head,water_head;
     Button back;
 
     @SuppressLint("MissingInflatedId")
@@ -29,28 +29,31 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
 
         water_AVG = findViewById(R.id.waterAVG);
         back = findViewById(R.id.button);
+        avg = findViewById(R.id.average_headline);
+        stat_head = findViewById(R.id.stat_headline);
+        water_head = findViewById(R.id.water_headline);
 
-        DatabaseReference waterLevelRef = FirebaseDatabase.getInstance().getReference().child("CurrentData").child("Water level");
 
-        waterLevelRef.addValueEventListener(new ValueEventListener() {
+        //showing database info in a var
+        DatabaseReference statisticsRef = FirebaseDatabase.getInstance().getReference().child("statistics");
+        statisticsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String waterLevel = dataSnapshot.getValue(String.class);
-                water_AVG.setText(waterLevel);
+                DataSnapshot waterLevelSnapshot = dataSnapshot.child("Water level").child("Average");
+                Double waterLevelAverage = waterLevelSnapshot.getValue(Double.class);
+                water_AVG.setText(String.valueOf(waterLevelAverage));
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 System.out.println("The read failed: " + databaseError.getCode());
-            }
-        });
+                }
+            });
 
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Statistics_waterLevel_Activity.this, StatisticsActivity.class);
-                startActivity(intent);
-            }
+        //back button
+        back.setOnClickListener(view -> {
+            Intent intent = new Intent(Statistics_waterLevel_Activity.this, StatisticsActivity.class);
+            startActivity(intent);
         });
     }
 }

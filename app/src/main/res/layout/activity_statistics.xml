@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:text="GrowMe"
         android:textColor="#5D7C60"
         android:textSize="90sp"
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="serif"
         android:text="-STATISTICS-"
         android:textColor="#CC46A6"
@@ -42,11 +42,11 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="150dp">
+        android:layout_marginBottom="180dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/water_level_card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="0"
             android:layout_column="0"
@@ -80,7 +80,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/Light_card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="0"
             android:layout_column="1"
@@ -117,7 +117,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/PH_Card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="0"
             android:layout_column="2"
@@ -154,7 +154,7 @@
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/back_Card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="1"
             android:layout_column="0"
@@ -187,7 +187,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/temp_Card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="1"
             android:layout_column="1"
@@ -223,7 +223,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/help_Card"
-            android:layout_width="110dp"
+            android:layout_width="117dp"
             android:layout_height="160dp"
             android:layout_row="1"
             android:layout_column="2"
