@@ -4,6 +4,9 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,11 +22,17 @@ import lecho.lib.hellocharts.view.LineChartView;
 public class WaterLevelGraphActivity extends AppCompatActivity {
 
     LineChartView lineChartView;
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_level_graph);
         lineChartView = findViewById(R.id.chart);
+
+        //////////////////////////////graph//////////////////////////////////////////////////////////
+
+
 
         String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
                 "Oct", "Nov", "Dec"};
@@ -56,13 +65,10 @@ public class WaterLevelGraphActivity extends AppCompatActivity {
         axis.setTextColor(Color.parseColor("#03A9F4"));
         yAxis.setTextColor(Color.parseColor("#03A9F4"));
         yAxis.setTextSize(16);
-        yAxis.setName("Sales in millions");
+        yAxis.setName("Water level value (mm)");
         Viewport viewport = new Viewport(lineChartView.getMaximumViewport());
         viewport.top =110;
         lineChartView.setMaximumViewport(viewport);
         lineChartView.setCurrentViewport(viewport);
-
-
-
     }
 }

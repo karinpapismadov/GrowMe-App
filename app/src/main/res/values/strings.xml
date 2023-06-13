@@ -46,4 +46,13 @@
     <string name="ph_level">-PH level-</string>
     <string name="light_">-Light-</string>
     <string name="help__">-Help-</string>
+    <string name="current">Current</string>
+    <string name="ph_level_">PH level</string>
+    <string name="temperature__">Temperature</string>
+    <string name="light_ldr">Light (LDR)</string>
+    <string name="water_levellll">Water level</string>
+    <string name="led">LED</string>
+    <string name="fan">Fan</string>
+    <string name="humidity">Humidity</string>
+    <string name="metrics">Metrics</string>
 </resources>
