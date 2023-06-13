@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/loginbackgroung"
-    tools:context=".MainActivity2pass">
+    tools:context=".LoginActivity2">
 
 
     <androidx.cardview.widget.CardView
@@ -34,18 +34,19 @@
                 android:textColor="@color/Sea_Green"/>
 
 
-
             <EditText
+                android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/login_code"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/border"
-                android:layout_marginTop="40dp"
-                android:padding="8dp"
-                android:hint="Code"
-                android:drawableStart="@drawable/baseline_code_24"
+                android:drawableStart="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:hint="@string/e_mail"
+                android:importantForAutofill="no"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#2E7D32" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -59,7 +60,8 @@
                 android:hint="Password"
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textColorHint="#2E7D32"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -70,7 +72,17 @@
                 android:layout_marginTop="30dp"
                 app:cornerRadius = "20dp"/>
 
-
+            <TextView
+                android:id="@+id/Register_redirect_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="7dp"
+                android:text="@string/don_t_have_an_account_click_to_register"
+                android:textColor="@color/Sea_Green"
+                android:textSize="16sp">
+            </TextView>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

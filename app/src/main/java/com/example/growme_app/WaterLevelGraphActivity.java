@@ -1,74 +1,90 @@
 package com.example.growme_app;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import lecho.lib.hellocharts.model.Axis;
-import lecho.lib.hellocharts.model.AxisValue;
-import lecho.lib.hellocharts.model.Line;
-import lecho.lib.hellocharts.model.LineChartData;
-import lecho.lib.hellocharts.model.PointValue;
-import lecho.lib.hellocharts.model.Viewport;
-import lecho.lib.hellocharts.view.LineChartView;
-
-
 public class WaterLevelGraphActivity extends AppCompatActivity {
 
-    LineChartView lineChartView;
-    private DatabaseReference mDatabase;
+    private BarChart barChart;
+    private DatabaseReference waterLevelRef;
+    private List<Float> waterLevelValues;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_level_graph);
-        lineChartView = findViewById(R.id.chart);
 
-        //////////////////////////////graph//////////////////////////////////////////////////////////
+        // Get a reference to the "Water level" value in the database.
+        waterLevelRef = FirebaseDatabase.getInstance().getReference().child("CurrentData").child("Water level");
 
+        barChart = findViewById(R.id.barchart);
+        barChart.setBackgroundColor(Color.WHITE);
+        barChart.setDrawGridBackground(false);
+        barChart.setDrawBarShadow(false);
+        barChart.setPinchZoom(false);
+        barChart.setDrawValueAboveBar(true);
 
+        waterLevelValues = new ArrayList<>();
 
-        String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
-                "Oct", "Nov", "Dec"};
+        waterLevelRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Read water level value from the database
+                String waterLevelStr = dataSnapshot.getValue(String.class);
+                float waterLevelValue = Float.parseFloat(waterLevelStr);
 
-        int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
-        List yAxisValues = new ArrayList();
-        List axisValues = new ArrayList();
-        Line line = new Line(yAxisValues);
+                // Add the new water level value to the list
+                waterLevelValues.add(waterLevelValue);
 
-        for(int i = 0; i < axisData.length; i++){
-            axisValues.add(i, new AxisValue(i).setLabel(axisData[i]));
+                // Update the chart with the new values
+                updateChart();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Log.e("WaterLevelGraphActivity", "The read failed: " + databaseError.getCode());
+            }
+        });
+    }
+
+    private void updateChart() {
+        // Create a list of BarEntry objects
+        List<BarEntry> entries = new ArrayList<>();
+
+        for (int i = 0; i < waterLevelValues.size(); i++) {
+            // Create a BarEntry object with the water level value
+            BarEntry barEntry = new BarEntry(i, waterLevelValues.get(i));
+            entries.add(barEntry);
         }
 
-        for (int i = 0; i < yAxisData.length; i++){
-            yAxisValues.add(new PointValue(i, yAxisData[i]));
-        }
+        // Create a BarDataSet object with the entries
+        BarDataSet dataSet = new BarDataSet(entries, "Water Level");
 
-        List lines = new ArrayList();
-        lines.add(line);
-        LineChartData data = new LineChartData();
-        data.setLines(lines);
-        lineChartView.setLineChartData(data);
-        Axis axis = new Axis();
-        axis.setValues(axisValues);
-        data.setAxisXBottom(axis);
-        Axis yAxis = new Axis();
-        data.setAxisYLeft(yAxis);
-        line = new Line(yAxisValues).setColor(Color.parseColor("#9C27B0"));
-        axis.setTextSize(16);
-        axis.setTextColor(Color.parseColor("#03A9F4"));
-        yAxis.setTextColor(Color.parseColor("#03A9F4"));
-        yAxis.setTextSize(16);
-        yAxis.setName("Water level value (mm)");
-        Viewport viewport = new Viewport(lineChartView.getMaximumViewport());
-        viewport.top =110;
-        lineChartView.setMaximumViewport(viewport);
-        lineChartView.setCurrentViewport(viewport);
+        // Set colors for the bars
+        dataSet.setColors(Color.BLUE);
+
+        // Create a BarData object with the data set
+        BarData barData = new BarData(dataSet);
+
+        // Set the data for the bar chart
+        barChart.setData(barData);
+
+        // Refresh the chart
+        barChart.invalidate();
     }
 }

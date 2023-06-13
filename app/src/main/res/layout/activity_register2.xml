@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+android:background="@drawable/back_register"
+tools:context=".RegisterActivity2">
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:padding="24dp"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/registeration"
+            android:textAlignment="center"
+            android:textColor="#689F38"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/register_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/baseline_person_24"
+            android:drawablePadding="8dp"
+            android:hint="@string/name"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#2E7D32"
+            tools:ignore="TextFields,VisualLintTextFieldSize,TextContrastCheck" />
+
+
+        <EditText
+            android:id="@+id/register_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/baseline_code_24"
+            android:drawablePadding="8dp"
+            android:hint="Code"
+            android:padding="8dp"
+            android:textColorHint="#2E7D32"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/register_mail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
+            android:hint="@string/e_mail"
+            android:importantForAutofill="no"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#2E7D32" />
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:background="@drawable/border"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#2E7D32"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/register"
+            android:id="@+id/register_button"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            app:cornerRadius = "20dp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/Login_redirect_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="7dp"
+            android:text="@string/already_have_an_account_click_to_login"
+            android:textColor="#2E7D32"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
