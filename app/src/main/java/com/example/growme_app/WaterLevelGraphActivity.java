@@ -1,54 +1,68 @@
 package com.example.growme_app;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.series.DataPoint;
-import com.jjoe64.graphview.series.LineGraphSeries;
+import java.util.ArrayList;
+import java.util.List;
+
+import lecho.lib.hellocharts.model.Axis;
+import lecho.lib.hellocharts.model.AxisValue;
+import lecho.lib.hellocharts.model.Line;
+import lecho.lib.hellocharts.model.LineChartData;
+import lecho.lib.hellocharts.model.PointValue;
+import lecho.lib.hellocharts.model.Viewport;
+import lecho.lib.hellocharts.view.LineChartView;
 
 
 public class WaterLevelGraphActivity extends AppCompatActivity {
 
-    GraphView graphView;
-
+    LineChartView lineChartView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_water_level_graph);
+        lineChartView = findViewById(R.id.chart);
 
-        // on below line we are initializing our graph view.
-        graphView = findViewById(R.id.idGraphView);
+        String[] axisData = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept",
+                "Oct", "Nov", "Dec"};
 
-        // on below line we are adding data to our graph view.
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[]{
-                // on below line we are adding
-                // each point on our x and y axis.
-                new DataPoint(0, 1),
-                new DataPoint(1, 3),
-                new DataPoint(2, 4),
-                new DataPoint(3, 9),
-                new DataPoint(4, 6),
-                new DataPoint(5, 3),
-                new DataPoint(6, 6),
-                new DataPoint(7, 1),
-                new DataPoint(8, 2)
-        });
+        int[] yAxisData = {50, 20, 15, 30, 20, 60, 15, 40, 45, 10, 90, 18};
+        List yAxisValues = new ArrayList();
+        List axisValues = new ArrayList();
+        Line line = new Line(yAxisValues);
 
-        // after adding data to our line graph series.
-        // on below line we are setting
-        // title for our graph view.
-        graphView.setTitle("My Graph View");
+        for(int i = 0; i < axisData.length; i++){
+            axisValues.add(i, new AxisValue(i).setLabel(axisData[i]));
+        }
 
-        // on below line we are setting
-        // text color to our graph view.
-        graphView.setTitleColor(R.color.Sea_Green);
+        for (int i = 0; i < yAxisData.length; i++){
+            yAxisValues.add(new PointValue(i, yAxisData[i]));
+        }
 
-        // on below line we are setting
-        // our title text size.
-        graphView.setTitleTextSize(18);
+        List lines = new ArrayList();
+        lines.add(line);
+        LineChartData data = new LineChartData();
+        data.setLines(lines);
+        lineChartView.setLineChartData(data);
+        Axis axis = new Axis();
+        axis.setValues(axisValues);
+        data.setAxisXBottom(axis);
+        Axis yAxis = new Axis();
+        data.setAxisYLeft(yAxis);
+        line = new Line(yAxisValues).setColor(Color.parseColor("#9C27B0"));
+        axis.setTextSize(16);
+        axis.setTextColor(Color.parseColor("#03A9F4"));
+        yAxis.setTextColor(Color.parseColor("#03A9F4"));
+        yAxis.setTextSize(16);
+        yAxis.setName("Sales in millions");
+        Viewport viewport = new Viewport(lineChartView.getMaximumViewport());
+        viewport.top =110;
+        lineChartView.setMaximumViewport(viewport);
+        lineChartView.setCurrentViewport(viewport);
 
-        // on below line we are adding
-        // data series to our graph view.
-        graphView.addSeries(series);
+
+
     }
 }

@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.androidplot:androidplot-core:1.5.10'
     implementation 'com.github.Philjay:MPAndroidChart:v3.1.0'
     implementation 'com.jjoe64:graphview:4.2.2'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
 
 
 }
