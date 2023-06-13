@@ -110,7 +110,7 @@
         android:layout_width="149dp"
         android:layout_height="44dp"
         android:paddingTop="10dp"
-        android:text="Light (lm):"
+        android:text="Light (lux):"
         android:textAlignment="center"
         android:textColor="#CB46A5"
         android:textSize="19sp"
