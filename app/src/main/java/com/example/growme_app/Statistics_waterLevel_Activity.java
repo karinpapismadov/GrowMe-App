@@ -19,7 +19,7 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
 
     private TextView water_AVG;
     TextView avg, stat_head,water_head;
-    Button back;
+    Button back,graph;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +32,7 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
         avg = findViewById(R.id.average_headline);
         stat_head = findViewById(R.id.stat_headline);
         water_head = findViewById(R.id.water_headline);
+        graph = findViewById(R.id.graph_button);
 
 
         //showing database info in a var
@@ -51,16 +52,11 @@ public class Statistics_waterLevel_Activity extends AppCompatActivity {
             });
 
 
-
-
-
-
-
-
-
-
-
-
+        //graph button
+        graph.setOnClickListener(view -> {
+            Intent intent = new Intent(Statistics_waterLevel_Activity.this, WaterLevelGraphActivity.class);
+            startActivity(intent);
+        });
 
         //back button
         back.setOnClickListener(view -> {
