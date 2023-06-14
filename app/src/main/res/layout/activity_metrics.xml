@@ -39,7 +39,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.425"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/metrics_headline"
@@ -72,7 +73,8 @@
         app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="0.606"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="149dp"
@@ -88,7 +90,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.247" />
+        app:layout_constraintVertical_bias="0.247"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="149dp"
@@ -104,7 +107,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintVertical_bias="0.337"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="149dp"
@@ -120,7 +124,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.515"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="123dp"
@@ -136,7 +141,8 @@
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.785" />
+        app:layout_constraintVertical_bias="0.785"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:layout_width="123dp"
@@ -152,7 +158,8 @@
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        app:layout_constraintVertical_bias="0.695"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/ph_level_metrics"

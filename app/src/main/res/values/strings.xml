@@ -55,4 +55,13 @@
     <string name="fan">Fan</string>
     <string name="humidity">Humidity</string>
     <string name="metrics">Metrics</string>
+    <string name="loading">Loading...</string>
+    <string name="todo">TODO</string>
+    <string name="loading_">Loading</string>
+    <string name="todo_">TODO</string>
+    <string name="backkkk">Back</string>
+    <string name="todo__">TODO</string>
+    <string name="loading___">Loading</string>
+    <string name="todo___">TODO</string>
+    <string name="loading____">Loading</string>
 </resources>

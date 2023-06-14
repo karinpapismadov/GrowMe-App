@@ -145,11 +145,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PH level"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textAlignment="center"
                     android:textColor="#5D7C60"
                     android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    tools:ignore="HardcodedText,SpUsage" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView

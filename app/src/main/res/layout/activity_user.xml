@@ -23,17 +23,21 @@
                 android:layout_height="150dp"
                 android:id="@+id/image_profile"
                 android:layout_centerInParent="true"
-                android:background="@drawable/user"/>
+                android:background="@drawable/user"
+                tools:ignore="ContentDescription" />
+
             <TextView
+                android:id="@+id/show_welcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/show_welcome"
                 android:layout_below="@+id/image_profile"
-                android:hint="Loading..."
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
+                android:hint="@string/loading"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textColorHint="#8D6E63"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
@@ -46,18 +50,21 @@
 
 
             <ImageView
+                android:id="@+id/user_icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/baseline_person_25"
-                android:id="@+id/user_icon"/>
+                android:background="@drawable/baseline_person_25"/>
+
             <TextView
+                android:id="@+id/text_show_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_show_name"
                 android:layout_alignStart="@+id/user_icon"
-                android:hint="Loading"
                 android:layout_marginStart="50dp"
-                android:textSize="20sp"/>
+                android:hint="@string/loading_"
+                android:textColorHint="#78909C"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
 
             <View
                 android:layout_width="match_parent"
@@ -65,29 +72,31 @@
                 android:layout_marginTop="20dp"
                 android:layout_below="@id/text_show_name"
                 android:background="@color/gray"
-                android:id="@+id/devider_name"/>
-
-
+                android:id="@+id/devider_name"
+                tools:ignore="ContentDescription" />
 
 
             <ImageView
-                android:layout_marginTop="40dp"
+                android:id="@+id/email_icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_below="@id/devider_name"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/baseline_email_25"
-                android:id="@+id/email_icon"
-                android:layout_below="@id/devider_name"/>
+                tools:ignore="ImageContrastCheck"/>
 
             <TextView
-                android:layout_marginTop="40dp"
+                android:id="@+id/text_show_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_show_email"
+                android:layout_below="@id/devider_name"
                 android:layout_alignStart="@+id/user_icon"
-                android:hint="Loading"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:hint="@string/loading___"
+                android:textColorHint="#78909C"
                 android:textSize="20sp"
-                android:layout_below="@id/devider_name"/>
+                tools:ignore="HardcodedText" />
 
             <View
                 android:layout_width="match_parent"
@@ -95,27 +104,31 @@
                 android:layout_marginTop="20dp"
                 android:layout_below="@id/text_show_email"
                 android:background="@color/gray"
-                android:id="@+id/devider_email"/>
+                android:id="@+id/devider_email"
+                tools:ignore="ContentDescription" />
 
 
             <ImageView
-                android:layout_marginTop="40dp"
+                android:id="@+id/code_icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_below="@id/devider_email"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/baseline_code_25"
-                android:id="@+id/code_icon"
-                android:layout_below="@id/devider_email"/>
+                tools:ignore="ImageContrastCheck"/>
 
             <TextView
-                android:layout_marginTop="40dp"
+                android:id="@+id/text_show_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_show_code"
+                android:layout_below="@id/devider_email"
                 android:layout_alignStart="@+id/code_icon"
-                android:hint="Loading"
                 android:layout_marginStart="50dp"
+                android:layout_marginTop="40dp"
+                android:hint="@string/loading____"
+                android:textColorHint="#78909C"
                 android:textSize="20sp"
-                android:layout_below="@id/devider_email"/>
+                tools:ignore="HardcodedText" />
 
             <View
                 android:layout_width="match_parent"
@@ -138,17 +151,18 @@
             android:id="@+id/user_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
             android:layout_marginTop="40dp"
-            android:text="Back"
-            android:textColor="@color/pink"
-            android:textSize="30sp"
-            android:textStyle="bold"
             android:background="@drawable/border"
             android:paddingStart="15dp"
-            android:paddingEnd="15dp"
             android:paddingTop="5dp"
+            android:paddingEnd="15dp"
             android:paddingBottom="5dp"
-            android:layout_marginStart="160dp"/>
+            android:text="@string/backkkk"
+            android:textColor="#FF4081"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
 
     </LinearLayout>
 

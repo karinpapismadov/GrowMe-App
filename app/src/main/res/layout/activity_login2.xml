@@ -31,7 +31,8 @@
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:textAlignment="center"
-                android:textColor="@color/Sea_Green"/>
+                android:textColor="@color/Sea_Green"
+                tools:ignore="HardcodedText" />
 
 
             <EditText
@@ -61,7 +62,8 @@
                 android:drawableStart="@drawable/baseline_lock_24"
                 android:drawablePadding="8dp"
                 android:textColor="@color/black"
-                android:textColorHint="#2E7D32"/>
+                android:textColorHint="#2E7D32"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:layout_width="match_parent"
@@ -70,7 +72,8 @@
                 android:id="@+id/Login_button"
                 android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                app:cornerRadius = "20dp"/>
+                app:cornerRadius = "20dp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/Register_redirect_text"

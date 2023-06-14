@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        //noinspection JcenterRepositoryObsolete
         jcenter()
         google()
         mavenCentral() // New line

@@ -60,7 +60,8 @@ tools:context=".RegisterActivity2">
             android:hint="Code"
             android:padding="8dp"
             android:textColorHint="#2E7D32"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/register_mail"
