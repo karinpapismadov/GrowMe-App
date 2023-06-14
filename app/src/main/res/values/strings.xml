@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">GrowMe-App</string>
     <string name="back_to_menu_page">BACK TO MENU PAGE</string>
     <string name="what_supplies_i_need_in_order_to_start_gardening">What_supplies_I_need_in_order_to_start_gardening</string>
@@ -64,4 +64,14 @@
     <string name="loading___">Loading</string>
     <string name="todo___">TODO</string>
     <string name="loading____">Loading</string>
+    <string name="show">Show Popup</string>
+    <string name="message1">bt1</string>
+    <string name="message2">bt2</string>
+    <string name="message3">bt3</string>
+    <string name="message4">bt4</string>
+    <string name="message5">bt5</string>
+    <string name="message6">bt6</string>
+    <string name="message7">bt7</string>
+    <string name="message8">bt8</string>
+
 </resources>

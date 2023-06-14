@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/flowers9"
+    android:id="@+id/parent_layout"
     tools:context=".HelpActivity">
 
     <LinearLayout
@@ -98,6 +99,10 @@
             android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/LightPink"
             tools:ignore="UnusedAttribute,VisualLintButtonSize" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/popup_msg"/>
     </LinearLayout>
+
 </ScrollView>
