@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnLetsStart.setOnClickListener(view -> {
 
         });
-        btnLetsStart.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, RegisterActivity2.class)));
+        btnLetsStart.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, LoginActivity2.class)));
 
     }
 }

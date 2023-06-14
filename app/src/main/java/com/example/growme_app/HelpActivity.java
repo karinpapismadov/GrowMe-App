@@ -23,6 +23,8 @@ public class HelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_help);
 
 
+
+
         back = findViewById(R.id.BACK_TO_MENU_PAGE);
 
 

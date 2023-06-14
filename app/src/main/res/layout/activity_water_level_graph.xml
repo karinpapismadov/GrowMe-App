@@ -10,7 +10,7 @@
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barchart"
         android:layout_width="400dp"
-        android:layout_height="675dp"
+        android:layout_height="700dp"
         android:layout_marginHorizontal="5dp">
 
     </com.github.mikephil.charting.charts.BarChart>

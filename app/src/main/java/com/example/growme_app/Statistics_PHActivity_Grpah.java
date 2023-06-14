@@ -2,9 +2,11 @@ package com.example.growme_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -23,6 +25,7 @@ public class Statistics_PHActivity_Grpah extends AppCompatActivity {
     private BarChart barChart;
     private DatabaseReference waterLevelRef;
     private List<Float> waterLevelValues;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,8 @@ public class Statistics_PHActivity_Grpah extends AppCompatActivity {
 
         // Get a reference to the "Water level" value in the database.
         waterLevelRef = FirebaseDatabase.getInstance().getReference().child("CurrentData").child("PH value");
+
+        back = findViewById(R.id.Back_graph);
 
         barChart = findViewById(R.id.barchart);
         barChart.setBackgroundColor(Color.WHITE);
@@ -86,5 +91,10 @@ public class Statistics_PHActivity_Grpah extends AppCompatActivity {
 
         // Refresh the chart
         barChart.invalidate();
+
+        back.setOnClickListener(view -> {
+            Intent intent = new Intent(Statistics_PHActivity_Grpah.this, StatisticsActivity.class);
+            startActivity(intent);
+        });
     }
 }

@@ -2,9 +2,12 @@ package com.example.growme_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -25,7 +28,9 @@ public class Statistics_lightActivityGrpah extends AppCompatActivity {
     private BarChart barChart;
     private DatabaseReference waterLevelRef;
     private List<Float> waterLevelValues;
+    Button back;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,7 @@ public class Statistics_lightActivityGrpah extends AppCompatActivity {
 
         // Get a reference to the "LDR value" value in the database.
         waterLevelRef = FirebaseDatabase.getInstance().getReference().child("CurrentData").child("LDR value");
+        back = findViewById(R.id.Back_graph);
 
         barChart = findViewById(R.id.barchart);
         barChart.setBackgroundColor(Color.WHITE);
@@ -88,5 +94,10 @@ public class Statistics_lightActivityGrpah extends AppCompatActivity {
 
         // Refresh the chart
         barChart.invalidate();
+
+        back.setOnClickListener(view -> {
+            Intent intent = new Intent(Statistics_lightActivityGrpah.this, StatisticsActivity.class);
+            startActivity(intent);
+        });
     }
 }

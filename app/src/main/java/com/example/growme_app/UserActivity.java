@@ -19,21 +19,20 @@ public class UserActivity extends AppCompatActivity {
 
 
     TextView name, code, mail;
-    Button back;
-
     @SuppressLint("WrongViewCast")
+    Button back = findViewById(R.id.user_back);
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference userRef = database.getReference("Users");
+        DatabaseReference userRef = database.getReference("CurrentData");
 
         name = findViewById(R.id.text_show_name);
         code = findViewById(R.id.text_show_code);
         mail = findViewById(R.id.text_show_email);
 
-        back = findViewById(R.id.user_back);
 
         // Attach a ValueEventListener to retrieve the data from Firebase
         userRef.addValueEventListener(new ValueEventListener() {
@@ -41,14 +40,14 @@ public class UserActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // Retrieve the metric values from the dataSnapshot
                 String nameU = dataSnapshot.child("name").getValue(String.class);
-                String mailU = dataSnapshot.child("email").getValue(String.class);
+                String mailU = dataSnapshot.child("mail").getValue(String.class);
                 String codeU = dataSnapshot.child("code").getValue(String.class);
 
 
                 // Set the metric values to the TextViews
                 name.setText(nameU);
-                code.setText(mailU);
-                mail.setText(codeU);
+                mail.setText(mailU);
+                code.setText(codeU);
 
             }
 

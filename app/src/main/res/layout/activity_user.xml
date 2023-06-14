@@ -53,7 +53,7 @@
                 android:id="@+id/user_icon"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:background="@drawable/baseline_person_25"/>
+                android:background="@drawable/baseline_person_25" />
 
             <TextView
                 android:id="@+id/text_show_name"
@@ -83,7 +83,8 @@
                 android:layout_below="@id/devider_name"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/baseline_email_25"
-                tools:ignore="ImageContrastCheck"/>
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="@string/todo__" />
 
             <TextView
                 android:id="@+id/text_show_email"
@@ -115,7 +116,8 @@
                 android:layout_below="@id/devider_email"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/baseline_code_25"
-                tools:ignore="ImageContrastCheck"/>
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="@string/todo___" />
 
             <TextView
                 android:id="@+id/text_show_code"
