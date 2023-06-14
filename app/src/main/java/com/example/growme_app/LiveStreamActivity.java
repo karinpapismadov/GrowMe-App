@@ -22,7 +22,7 @@ public class LiveStreamActivity extends AppCompatActivity {
         live  = findViewById(R.id.live_url_button);
 
         live.setOnClickListener(view -> {
-            String url = "https://37a6-2a0d-6fc0-804-dc00-75f5-d55c-a82-3a3f.ngrok-free.app/stream/";
+            String url = "https://9db3-2a0d-6fc0-84e-9d00-a051-a3f2-7720-b032.ngrok-free.app/stream";
             Uri uri = Uri.parse(url);
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
