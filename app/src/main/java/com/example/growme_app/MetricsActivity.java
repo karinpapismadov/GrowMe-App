@@ -25,6 +25,9 @@ import android.os.Build;
 public class MetricsActivity extends AppCompatActivity {
 
     private TextView fan, LDR, LED, water, PH, humidity, temp;
+    private int ledStatus = -1;  // Initialize with a value that doesn't exist
+    private int fanStatus = -1;  // Initialize with a value that doesn't exist
+
     Button back;
     private NotificationManager notificationManager;
 
@@ -60,6 +63,9 @@ public class MetricsActivity extends AppCompatActivity {
                 String pHValue = dataSnapshot.child("PH value").getValue(String.class);
                 String humidityValue = dataSnapshot.child("Humidity").getValue(String.class);
                 String temperatureValue = dataSnapshot.child("Temperature").getValue(String.class);
+                ///// new
+                int currentFanLevel = Integer.parseInt(fanLevel);
+                int currentLEDValue = Integer.parseInt(ledValue);
                 // Set the metric values to the TextViews
                 fan.setText(fanLevel);
                 LDR.setText(ldrValue);
@@ -77,6 +83,8 @@ public class MetricsActivity extends AppCompatActivity {
                 //checkLEDStatus(Integer.parseInt(ledValue));
                 checkHumidity(Double.parseDouble(humidityValue));
                 ///// led+fan check
+                checkFanStatus(currentFanLevel);
+                checkLEDStatus(currentLEDValue);
 
             }
 
@@ -144,6 +152,34 @@ public class MetricsActivity extends AppCompatActivity {
         if (humidity < 0 || humidity > 100) {
             showNotification("Humidity Alert", "Humidity is out of range");
         }
+    }
+    //// NEW ////////
+
+    private void checkFanStatus(int fanLevel) {
+        // Check if the fan status has changed from the current state
+        if (fanLevel == 1 && fanStatus != 1) {
+            // Fan turned on, show notification
+            showNotification("Fan Status", "The fan has been turned on");
+        } else if (fanLevel == 0 && fanStatus != 0) {
+            // Fan turned off, show notification
+            showNotification("Fan Status", "The fan has been turned off");
+        }
+        // Update the fanStatus variable to the current state
+        fanStatus = fanLevel;
+    }
+
+
+    private void checkLEDStatus(int ledValue) {
+        // Check if the LED status has changed from the current state
+        if (ledValue == 1 && ledStatus != 1) {
+            // LED turned on, show notification
+            showNotification("LED Status", "The LED has been turned on");
+        } else if (ledValue == 0 && ledStatus != 0) {
+            // LED turned off, show notification
+            showNotification("LED Status", "The LED has been turned off");
+        }
+        // Update the ledStatus variable to the current state
+        ledStatus = ledValue;
     }
 
 }
