@@ -15,6 +15,9 @@
         android:theme="@style/Theme.GrowMeApp"
         tools:targetApi="31">
         <activity
+            android:name=".PopHelpBt1"
+            android:exported="false" />
+        <activity
             android:name=".PopHelpBt8"
             android:exported="false" />
         <activity

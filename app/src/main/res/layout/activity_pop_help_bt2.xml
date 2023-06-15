@@ -6,5 +6,48 @@
     android:layout_height="match_parent"
     android:background="@drawable/flowers9"
     tools:context=".PopHelpBt2">
+    <TextView
+        android:id="@+id/bt2_title"
+        android:layout_width="374dp"
+        android:layout_height="65dp"
+        android:text="@string/i_have_a_system_how_can_i_now_create_my_garden"
+        android:textColor="#BB324E"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <TextView
+        android:id="@+id/bt2_answer"
+        android:layout_width="374dp"
+        android:layout_height="65dp"
+        android:text="@string/how_can_i_add_a_plant_into_my_garden"
+        android:textColor="#BB324E"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.567"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <Button
+        android:id="@+id/BACK_TO_HELP_PAGE"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="Back to help page"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="UnusedAttribute,VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
