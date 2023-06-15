@@ -99,10 +99,7 @@
             android:outlineSpotShadowColor="@color/black"
             android:textColor="@color/LightPink"
             tools:ignore="UnusedAttribute,VisualLintButtonSize" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/popup_msg"/>
+
     </LinearLayout>
 
 </ScrollView>

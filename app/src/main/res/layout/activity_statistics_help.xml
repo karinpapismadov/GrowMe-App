@@ -8,7 +8,7 @@
     tools:context=".Statistics_helpActivity">
 
     <TextView
-        android:id="@+id/stat_headline"
+        android:id="@+id/stat_help_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <TextView
-        android:id="@+id/help_headline"
+        android:id="@+id/help_stathelp_headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -37,47 +37,68 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/stat_headline"
-        app:layout_constraintVertical_bias="0.116" />
-
-    <TextView
-        android:id="@+id/average_headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/average"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239" />
-
-    <TextView
-        android:id="@+id/waterAVG"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/avg"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
+        app:layout_constraintVertical_bias="0.161" />
 
     <Button
-        android:id="@+id/back_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back_button"
+        android:id="@+id/What_can_I_see_in_the_statistics_page"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="What can I see in the statistics page?"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.304"
+        tools:ignore="UnusedAttribute,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/How_can_I_watch_a_specific_sensor_data_values"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="17sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="How can I watch a specific sensor data values?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457"
+        tools:ignore="UnusedAttribute,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/What_does_the_graph_values_mean"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="17sp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="What does the graph values mean?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.609"
+        tools:ignore="UnusedAttribute,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/BACK_TO_STATISTICS_PAGE"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:outlineSpotShadowColor="@color/black"
+        android:text="@string/back_to_menu_page"
+        android:textColor="@color/LightPink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        tools:ignore="UnusedAttribute,VisualLintButtonSize" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
